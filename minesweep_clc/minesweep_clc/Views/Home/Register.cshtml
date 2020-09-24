@@ -19,7 +19,7 @@
 	}
 
 	/* Full-width input fields */
-	input[type=text], input[type=password] {
+	input[type=text], input[type=password], input[type=number], input[type=email] {
 		width: 100%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
@@ -28,10 +28,10 @@
 		background: #f1f1f1;
 	}
 
-		input[type=text]:focus, input[type=password]:focus {
-			background-color: #ddd;
-			outline: none;
-		}
+        input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
 
 	/* Overwrite default styles of hr */
 	hr {
@@ -75,15 +75,98 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
 
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter a username" name="username" id="username" required>
+
+            <label for="fname"><b>First Name</b></label>
+            <input type="text" placeholder="Enter first name" name="fname" id="fname" required>
+
+            <label for="lname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last name" name="lname" id="lname" required>
+            <br><br />
+            <label for="age"><b>Age:</b></label>
+            <input type="number" id="age" name="age" min="1" max="100" required>
+            <br><br />
+
+            <b>Please select your gender:</b>
+            <br><br />
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br><br />
+            <label for="state"><b>Choose your state:</b></label>
+            <br><br />
+
+            <select name="state" id="state" required>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AR">AR</option>
+                <option value="AZ">AZ</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DC">DC</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="IA">IA</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="MA">MA</option>
+                <option value="MD">MD</option>
+                <option value="ME">ME</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MO">MO</option>
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="NC">NC</option>
+                <option value="NE">NE</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NV">NV</option>
+                <option value="NY">NY</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WI">WI</option>
+                <option value="WV">WV</option>
+                <option value="WY">WY</option>
+            </select>
+            <br><br />
+
+
+
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <br><br />
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
             <label for="psw-repeat"><b>Repeat Password</b></label>
             <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-            <hr>
+            <br><br />
 
 
             <button type="submit" class="registerbtn">Register</button>
